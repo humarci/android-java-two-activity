@@ -20,7 +20,7 @@ Add some values into re/values/strings.xml:
 ```
 
 # 👉 Step 4:
-Add a button and modify the TextView in activity_main.xml
+Add a `Button` and modify the `TextView` in `activity_main.xml`
 ```XML
     <TextView
         android:id="@+id/textView"
@@ -41,4 +41,28 @@ Add a button and modify the TextView in activity_main.xml
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:text="@string/btn_activity1_text" />
+```
+
+# 👉 Step 5:
+Modify `activity_second.xml` layout:
+```XML
+ <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_activity2_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_activity2_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="@string/btn_activity2_text" />
 ```
