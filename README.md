@@ -67,7 +67,7 @@ Modify `activity_second.xml` layout:
         tools:text="@string/btn_activity2_text" />
 ```
 
-# Step 6:
+# 👉 Step 6:
 Update the java code of `MainActivity.java` file, add `uiChanger()` method.
 Use the following imports:
 
@@ -105,5 +105,47 @@ You will see, when the activity is destroyed.
     protected void onDestroy() {
         super.onDestroy();
         Log.d("TwoActivityApp", "1st activity onDestroy...");
+    }
+```
+
+# 👉 Step 7:
+Update the `activity_second.java` file. First you can use `intent`, but you will see the previous activity was in stack, so we are using the `finish()` method.
+
+Use the following imports:
+
+```Java
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+```
+
+```Java
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        uiChanger();
+    }
+    private void uiChanger(){
+        Button button = findViewById(R.id.button_activity2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(activity_second.this, R.string.toast_activity2_text, Toast.LENGTH_LONG).show();
+                //Intent intent = new Intent();
+                //intent.setClass(activity_second.this, MainActivity.class);
+                //startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("TwoActivityApp", "2nd activity onDestroy...");
     }
 ```
