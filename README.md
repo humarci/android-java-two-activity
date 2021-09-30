@@ -18,3 +18,27 @@ Add some values into re/values/strings.xml:
 <string name="toast_activity1_text">Button is pressed on activity 1</string>
 <string name="toast_activity2_text">Button is pressed on activity 2</string>
 ```
+
+# 👉 Step 4:
+Add a button and modify the TextView in activity_main.xml
+```XML
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_activity1_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_activity1_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="@string/btn_activity1_text" />
+```
