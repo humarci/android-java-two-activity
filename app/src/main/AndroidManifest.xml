@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TwoActivityDemo">
         <activity
+            android:name=".activity_second"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
