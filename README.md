@@ -6,6 +6,8 @@ Create a new app with empty activity.
 # 👉 Step 2:
 Creating a new empty activity, name is: `activity_second`
 
+![pic](assets/new_activity.png)
+
 # 👉 Step 3:
 Add some values into re/values/strings.xml:
 ```XML
