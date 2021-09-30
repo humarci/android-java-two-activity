@@ -149,3 +149,5 @@ import android.widget.Toast;
         Log.d("TwoActivityApp", "2nd activity onDestroy...");
     }
 ```
+
+👍 Finally you can check the app, the logs will be visible in `LogCat`. Use the tag `TwoActivityApp` to filter the logcat.
